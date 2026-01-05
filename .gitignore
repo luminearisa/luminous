@@ -1,0 +1,10 @@
+/vendor/
+.env
+/storage/logs/*
+/storage/cache/*
+!storage/logs/.gitkeep
+!storage/cache/.gitkeep
+composer.lock
+.DS_Store
+Thumbs.db
+

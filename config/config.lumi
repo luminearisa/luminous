@@ -1,0 +1,26 @@
+{
+  "app": {
+    "name": "Luminous",
+    "env": "production",
+    "version": "1.0.0"
+  },
+  "jwt": {
+    "secret": "env:JWT_SECRET",
+    "algo": "HS256",
+    "expire": 3600
+  },
+  "auth": {
+    "guard": "jwt",
+    "password_min_length": 8
+  },
+  "database": {
+    "default": "env:DB_CONNECTION",
+    "charset": "utf8mb4"
+  },
+  "cors": {
+    "enabled": true,
+    "allowed_origins": "*",
+    "allowed_methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+    "allowed_headers": "Content-Type, Authorization, X-Requested-With"
+  }
+}

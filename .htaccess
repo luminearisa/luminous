@@ -1,0 +1,39 @@
+<IfModule mod_rewrite.c>
+    # Enable URL rewriting
+    RewriteEngine On
+
+    # Redirect all requests to index.php if file/directory doesn't exist
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
+
+# Set default character encoding
+AddDefaultCharset UTF-8
+
+# Set PHP configuration (optional - uncomment if needed)
+# php_value upload_max_filesize 10M
+# php_value post_max_size 10M
+# php_value max_execution_time 300
+# php_value memory_limit 256M
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(env|lumi|json|lock|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

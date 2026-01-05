@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Luminous CLI Entry Point
+ */
+
+require __DIR__ . '/vendor/autoload.php';
+
+use App\Console\Kernel;
+
+$kernel = new Kernel();
+$kernel->handle($argv);

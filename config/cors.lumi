@@ -1,0 +1,32 @@
+{
+    "enabled": true,
+    "allow_all": true,
+    "allowed_origins": [
+        {
+            "origin": "http://localhost:3000",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+            ],
+            "endpoints": [
+                "/api/*"
+            ]
+        }
+    ],
+    "allowed_headers": [
+        "Content-Type",
+        "Authorization",
+        "X-Requested-With",
+        "Accept",
+        "Origin"
+    ],
+    "exposed_headers": [
+        "Content-Length",
+        "X-Request-Id"
+    ],
+    "supports_credentials": true,
+    "max_age": 86400
+}

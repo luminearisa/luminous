@@ -1,0 +1,4 @@
+{
+  "enabled": true,
+  "limit_per_minute": 60
+}

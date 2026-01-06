@@ -29,6 +29,15 @@ class Kernel
             'serve' => Commands\Serve::class,
             'run' => Commands\Serve::class,
             'list' => Commands\ListCommands::class,
+            // CORS commands
+            'cors:add' => Commands\CorsAdd::class,
+            'cors:remove' => Commands\CorsRemove::class,
+            'cors:list' => Commands\CorsList::class,
+            'cors:allow-all' => Commands\CorsAllowAll::class,
+            'cors:disallow-all' => Commands\CorsDisallowAll::class,
+            'cors:whitelist' => Commands\CorsWhitelist::class,
+            // Rate Limit commands
+            'limit:set' => Commands\RateLimitSet::class,
         ];
     }
 
@@ -83,6 +92,16 @@ class Kernel
         echo "  migrate            Run database migrations\n";
         echo "  run                Start development server\n";
         echo "  list               List all available commands\n";
+        echo "\n";        echo "CORS Commands:\n";
+        echo "  cors:add           Add origin to CORS whitelist\n";
+        echo "  cors:remove        Remove origin from whitelist\n";
+        echo "  cors:list          List all CORS configuration\n";
+        echo "  cors:allow-all     Allow all origins (development)\n";
+        echo "  cors:disallow-all  Disable all CORS\n";
+        echo "  cors:whitelist     Enable whitelist mode\n";
+        echo "\n";
+        echo "Rate Limiting:\n";
+        echo "  limit:set          Set rate limit (e.g., 60 or unlimited)\n";
         echo "\n";
     }
 

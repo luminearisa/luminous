@@ -25,7 +25,9 @@ class Kernel
             'make:model' => Commands\MakeModel::class,
             'make:migration' => Commands\MakeMigration::class,
             'make:middleware' => Commands\MakeMiddleware::class,
+            'make:seeder' => Commands\MakeSeeder::class,
             'migrate' => Commands\Migrate::class,
+            'db:seed' => Commands\SeedCommand::class,
             'serve' => Commands\Serve::class,
             'run' => Commands\Serve::class,
             'list' => Commands\ListCommands::class,
@@ -89,7 +91,9 @@ class Kernel
         echo "  make:model         Create a new model\n";
         echo "  make:migration     Create a new migration\n";
         echo "  make:middleware    Create a new middleware\n";
+        echo "  make:seeder        Create a new seeder\n";
         echo "  migrate            Run database migrations\n";
+        echo "  db:seed            Run database seeders\n";
         echo "  run                Start development server\n";
         echo "  list               List all available commands\n";
         echo "\n";        echo "CORS Commands:\n";

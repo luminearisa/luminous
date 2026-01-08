@@ -20,7 +20,9 @@ class ListCommands extends Command
             'make:model' => 'Create a new model class',
             'make:migration' => 'Create a new database migration',
             'make:middleware' => 'Create a new middleware class',
+            'make:seeder' => 'Create a new database seeder',
             'migrate' => 'Run all pending database migrations',
+            'db:seed' => 'Run database seeders (--class=SeederName for specific)',
             'run' => 'Start development server (default: localhost:8000)',
             'list' => 'Display list of available commands',
         ];
